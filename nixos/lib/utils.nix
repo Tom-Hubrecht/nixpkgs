@@ -1,4 +1,33 @@
-{ lib, config, pkgs }: with lib;
+{ lib, config, pkgs }:
+
+let
+  inherit (lib)
+    any
+    attrNames
+    concatMapStringsSep
+    concatStringsSep
+    elem
+    flatten
+    hasPrefix
+    hasSuffix
+    imap0
+    imap1
+    isAttrs
+    isDerivation
+    isList
+    listToAttrs
+    nameValuePair
+    optionalString
+    removePrefix
+    removeSuffix
+    replaceStrings
+    strings
+    stringToCharacters
+    types
+    ;
+
+  inherit (lib.lists) map;
+in
 
 rec {
 
